@@ -1,0 +1,2 @@
+class FixPriceColumn < ApplicationRecord
+end
