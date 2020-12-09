@@ -10,14 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_07_024751) do
+ActiveRecord::Schema.define(version: 2020_12_09_145405) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "fix_price_columns", force: :cascade do |t|
+  create_table "cartitems", force: :cascade do |t|
+    t.bigint "order_id", null: false
+    t.string "name"
+    t.string "image"
+    t.integer "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["order_id"], name: "index_cartitems_on_order_id"
   end
 
   create_table "items", force: :cascade do |t|
@@ -32,11 +37,10 @@ ActiveRecord::Schema.define(version: 2020_12_07_024751) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.bigint "item_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["item_id"], name: "index_orders_on_item_id"
+    t.integer "qty"
   end
 
-  add_foreign_key "orders", "items"
+  add_foreign_key "cartitems", "orders"
 end

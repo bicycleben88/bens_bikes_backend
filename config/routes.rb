@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :cartitems
   resources :fix_price_columns
   resources :orders
   resources :items

@@ -5,18 +5,18 @@ class OrdersController < ApplicationController
   def index
     @orders = Order.all
 
-    render json: @orders
+    render json: @orders.to_json(include: :cartitems)
   end
 
   # GET /orders/1
   def show
-    render json: @order
+    render json: @order.to_json(include: :items)
   end
 
   # POST /orders
   def create
     @order = Order.new(order_params)
-
+    
     if @order.save
       render json: @order, status: :created, location: @order
     else
@@ -46,6 +46,6 @@ class OrdersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def order_params
-      params.require(:order).permit(:item_id)
+      params.require(:order).permit(:items, :id, :created_at, :updated_at)
     end
 end
