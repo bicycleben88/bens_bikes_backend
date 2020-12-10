@@ -10,7 +10,7 @@ class OrdersController < ApplicationController
 
   # GET /orders/1
   def show
-    render json: @order.to_json(include: :items)
+    render json: @order.to_json(include: :cartitems)
   end
 
   # POST /orders
@@ -35,6 +35,11 @@ class OrdersController < ApplicationController
 
   # DELETE /orders/1
   def destroy
+    if @order.cartitems.length > 0
+      @order.cartitems.each{ |item|  
+        Cartitem.find(item.id).destroy
+      }
+    end
     @order.destroy
   end
 
