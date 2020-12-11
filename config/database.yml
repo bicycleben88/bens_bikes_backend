@@ -80,7 +80,7 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV['DBURI'] %>
+  url: <%= ENV['DATABASE_URL'] %>
   database: bens_bikes_backend_production
   username: bens_bikes_backend
   password: <%= ENV['BENS_BIKES_BACKEND_DATABASE_PASSWORD'] %>
