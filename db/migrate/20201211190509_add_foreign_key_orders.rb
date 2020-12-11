@@ -1,6 +1,5 @@
 class AddForeignKeyOrders < ActiveRecord::Migration[6.0]
   def change
-    add_column :orders, :user_id, :integer
-    add_foreign_key :orders, :users
+    add_reference :orders, :user, foreign_key: true
   end
 end
