@@ -13,6 +13,10 @@ class ItemsController < ApplicationController
     render json: @item
   end
 
+  def destroy
+    @item.destroy
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_item
