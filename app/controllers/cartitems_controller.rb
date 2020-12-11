@@ -16,7 +16,6 @@ class CartitemsController < ApplicationController
   # POST /cartitems
   def create
     @cartitem = Cartitem.new(cartitem_params)
-
     if @cartitem.save
       render json: @cartitem, status: :created, location: @cartitem
     else
