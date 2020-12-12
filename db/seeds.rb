@@ -48,3 +48,7 @@
 #         qty: 50
 #     }
 # ])
+
+Order.create([
+    { user_id: 1,  qty: 1 }
+])
