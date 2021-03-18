@@ -1,5 +1,10 @@
 class UsersController < ApplicationController
-    before_action :authorized, only: [:auto_login]
+  before_action :authorized, only: [:auto_login]
+  
+    # def show
+    #   @user = User.find_by({id: user_id})
+    #   render json: @user 
+    # end
 
     def create
       @user = User.create(user_params)
@@ -23,7 +28,7 @@ class UsersController < ApplicationController
     end
   
     def auto_login
-      render json: @user
+      render json: @user.to_json(include: :orders)
     end
   
     private
