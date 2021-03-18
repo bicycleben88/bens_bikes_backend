@@ -28,7 +28,7 @@ class UsersController < ApplicationController
     end
   
     def auto_login
-      render json: @user.to_json(include: :orders)
+      render json: @user.to_json(include: :orders, :cartitems)
     end
   
     private
