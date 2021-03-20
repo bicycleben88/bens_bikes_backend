@@ -5,7 +5,7 @@ class CartitemsController < ApplicationController
   def index
     @cartitems = Cartitem.all
 
-    render json: @cartitems
+    render json: @cartitems.to_json(include: :item)
   end
 
   # GET /cartitems/1
@@ -45,6 +45,6 @@ class CartitemsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def cartitem_params
-      params.require(:cartitem).permit(:order_id, :name, :image, :price)
+      params.require(:cartitem).permit(:item_id, :user_id)
     end
 end

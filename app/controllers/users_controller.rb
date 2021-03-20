@@ -28,8 +28,8 @@ class UsersController < ApplicationController
     end
   
     def auto_login
-      render json: @user.to_json(:include => { :orders => {
-        :include => :cartitems
+      render json: @user.to_json(:include => { :cartitems => {
+        :include => :item
       }})
     end
   
