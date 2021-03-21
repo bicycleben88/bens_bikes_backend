@@ -1,5 +1,9 @@
 # Ben's Bikes
 
+This is a front end e-commerce web application built with React. Users can create an account, browse thru products, add items to a cart & checkout. It accesses a full CRUD API built with Ruby on Rails that follows RESTful convention.
+
+## [Video Walkthru](https://www.youtube.com/playlist?list=PLjYC3ZkfhqCpDJl-34_mycn5KZcrrsPKR)
+
 > ### Live Earls:
 >
 > [bens-bikes-frontend.vercel.app](https://bens-bikes-frontend.vercel.app/)
@@ -24,30 +28,33 @@
 > - JWT
 > - BCrypt
 
-## MVP
+## Features & Functions
 
-> ### Front End:
+> ### Schemas
 >
-> - User can add an item to an order
-> - Index page with items in stock
-> - Show page with description of item & 'Add to Cart' button
-> - User can delete an item from an order
+> rails generate scaffold to create tables, models & controllers for Users, Items, CartItems, OrderItems & Orders
 >
-> ### Back End:
+> References:
 >
-> - Two models: items and orders
-> - CRUD items and orders with RESTful routes
+> - User has many orders & has many CartItems
+> - CartItems references a User & an Item
+> - Orders references a User & an OrderItem
+> - OrderItem belongs to an Order
+> - add foreign keys
+>
+> ![foreign keys](https://i.imgur.com/fjAxs3z.png)
+>
+> ### Controllers
+>
+> Users
+>
+> - authenticates, logs in & signs up a user
+> - auto_login returns a User & its CartItems
+>
+> ![auto_login](https://i.imgur.com/U32BISf.png)
 
-## Stretch
+## Contact
 
-> ### Front End:
->
-> - Log in & Sign up pages w/JWT
-> - User can add multiple items to a cart
-> - User can delete one item from a cart while leaving intact the rest of the order
->
-> ### Back End:
->
-> - CartItems model with One to Many relationship with an Order
-> - User model with One to Many relationship with an Order
-> - Authentication middleware w/JWT & BCrypt
+> - [LinkedIn](https://www.linkedin.com/in/benjamin-alt-higginbotham/)
+> - [Portfolio](https://higginbotham.fun/)
+> - [Tweet @BenMichaelJord1](https://twitter.com/BenMichaelJord1)
