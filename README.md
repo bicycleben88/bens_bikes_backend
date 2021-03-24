@@ -52,6 +52,14 @@ This is a front end e-commerce web application built with React. Users can creat
 > - auto_login returns a User & its CartItems
 >
 > ![auto_login](https://i.imgur.com/U32BISf.png)
+>
+> ### Add (Multiple) Cart Items
+>
+> - handle POST request from front end to /cartitems
+> - use .find_by to determine if a cart item with an item_id already exists
+> - if so, then update the quantity of that item by 1
+> - otherwise, create a new cart item with the params outlined in cartitem_params
+>   ![create cart  item](https://i.imgur.com/Pn1brh5.png)
 
 ## Contact
 
