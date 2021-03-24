@@ -15,11 +15,18 @@ class CartitemsController < ApplicationController
 
   # POST /cartitems
   def create
-    @cartitem = Cartitem.new(cartitem_params)
-    if @cartitem.save
-      render json: @cartitem, status: :created, location: @cartitem
+    if
+      Cartitem.find_by(item_id: params[:item_id].to_i)
+      @cartitem = Cartitem.find_by(item_id: params[:item_id].to_i)
+      @cartitem.update(quantity: @cartitem.quantity + 1)
+      render json: @cartitem
     else
-      render json: @cartitem.errors, status: :unprocessable_entity
+      @cartitem = Cartitem.new(cartitem_params)
+      if @cartitem.save
+        render json: @cartitem, status: :created, location: @cartitem
+      else
+        render json: @cartitem.errors, status: :unprocessable_entity
+      end
     end
   end
 
@@ -45,6 +52,6 @@ class CartitemsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def cartitem_params
-      params.require(:cartitem).permit(:item_id, :user_id)
+      params.require(:cartitem).permit(:item_id, :user_id, :quantity)
     end
 end
