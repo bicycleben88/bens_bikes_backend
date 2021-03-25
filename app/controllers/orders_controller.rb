@@ -15,9 +15,22 @@ class OrdersController < ApplicationController
 
   # POST /orders
   def create
+    @user = User.find(params[:user_id].to_i)
     @order = Order.new(order_params)
-    
+
     if @order.save
+       @user.cartitems.map{|cartitem| 
+         @order_item = OrderItem.create({
+            order_id: @order.id,
+            name: cartitem.item.name,
+            image: cartitem.item.image,
+            description: cartitem.item.description,
+            price: cartitem.item.price,
+            quantity: cartitem.quantity
+          })
+        @order.update(order_items_id: @order_item.id)
+        Cartitem.delete(cartitem.id)
+      }
       render json: @order, status: :created, location: @order
     else
       render json: @order.errors, status: :unprocessable_entity
@@ -46,6 +59,6 @@ class OrdersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def order_params
-      params.require(:order).permit(:id, :created_at, :updated_at, :user_id)
+      params.require(:order).permit(:id, :created_at, :updated_at, :user_id, :order_items_id)
     end
 end
