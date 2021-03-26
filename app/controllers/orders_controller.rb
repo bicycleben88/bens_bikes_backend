@@ -17,6 +17,7 @@ class OrdersController < ApplicationController
   def create
     @user = User.find(params[:user_id].to_i)
     @order = Order.new(order_params)
+    @total = 0
 
     if @order.save
        @user.cartitems.map{|cartitem| 
@@ -28,9 +29,11 @@ class OrdersController < ApplicationController
             price: cartitem.item.price,
             quantity: cartitem.quantity
           })
-        @order.update(order_items_id: @order_item.id)
+        @total += @order_item.price * cartitem.quantity
+        @order.update(order_items_id: @order_item.id, total: @total)
         Cartitem.delete(cartitem.id)
       }
+
       render json: @order, status: :created, location: @order
     else
       render json: @order.errors, status: :unprocessable_entity
