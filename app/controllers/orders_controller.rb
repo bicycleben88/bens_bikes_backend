@@ -34,6 +34,15 @@ class OrdersController < ApplicationController
         Cartitem.delete(cartitem.id)
       }
 
+      @charge = Stripe::PaymentIntent.create({
+        amount: @order.total,
+        currency: "USD",
+        confirm: true,
+        payment_method: params[:stripe_token],
+      })
+
+      @order.update(charge: @charge.id)
+      
       render json: @order, status: :created, location: @order
     else
       render json: @order.errors, status: :unprocessable_entity
