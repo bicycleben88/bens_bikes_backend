@@ -60,6 +60,26 @@ This is a front end e-commerce web application built with React. Users can creat
 > - if so, then update the quantity of that item by 1
 > - otherwise, create a new cart item with the params outlined in cartitem_params
 >   ![create cart  item](https://i.imgur.com/Pn1brh5.png)
+>
+> ### Stripe Credit Card Payments
+>
+> #### Configuring Stripe
+>
+> - Create Stripe account to get API keys
+> - Create file stripe.rb in /config/initializers
+>   - Add API keys (stored as environmental variables)
+> - ![stripe.rb](https://i.imgur.com/aNp8b1h.png)
+> - Add Environmental variables
+>   - Create file called local_env.yml & add it to .gitignore
+>   - Store key/value pairs e.g. STRIPE_KEY: "api key"
+> - In application.rb add the following code before loading default config
+> - ![application.rb add env variables](https://i.imgur.com/eQr0fkr.png)
+
+## Sources
+
+> [Stripe](https://stripe.com/)
+>
+> [Setting up Stripe on Rails](https://stripe.com/docs/legacy-checkout/rails)
 
 ## Contact
 
