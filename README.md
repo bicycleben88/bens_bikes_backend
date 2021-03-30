@@ -74,6 +74,13 @@ This is a front end e-commerce web application built with React. Users can creat
 >   - Store key/value pairs e.g. STRIPE_KEY: "api key"
 > - In application.rb add the following code before loading default config
 > - ![application.rb add env variables](https://i.imgur.com/eQr0fkr.png)
+>
+> #### Create Stripe Payment
+>
+> - Use the PaymentIntents module to create a new payment, passing the Stipe token from the request body
+> - ![payment intent](https://i.imgur.com/V3smX7b.png)
+> - update order to include the charge
+> - ![update order with stripe payment](https://i.imgur.com/sGTHfrq.png)
 
 ## Sources
 
