@@ -7,8 +7,7 @@ class ItemsController < ApplicationController
   end
 
   def index
-    @items = Item.all
-
+    @items = Item.find_each(start: params[:start], finish: params[:finish])
     render json: @items
   end
 
