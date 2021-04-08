@@ -81,6 +81,27 @@ This is a front end e-commerce web application built with React. Users can creat
 > - ![payment intent](https://i.imgur.com/V3smX7b.png)
 > - update order to include the charge
 > - ![update order with stripe payment](https://i.imgur.com/sGTHfrq.png)
+>
+> ### Pagination
+>
+> Create API endpoint that returns a count of the items in the inventory
+>
+> - in routes.rb add route that runs the function 'count' when it recieves a get request from ".../items_count"  
+>   ![count route](https://i.imgur.com/qBOoMtM.png)
+>
+> Write count function
+>
+> - in items_controller.rb use method .count on Item model to return the total number of items in the inventory
+>   ![count function](https://i.imgur.com/1mDqfTK.png)
+>
+> Add 'will_paginate' to Gemfile
+>
+> - ![paginate gem](https://i.imgur.com/dgdEZIE.png)
+>
+> Use 'will_paginate' in items index route to render a specific number of items per page
+>
+> - in items_controller.rb index route use .paginate method, passing it as arguments the page number and the number of items per page to display
+>   ![paginate index route](https://i.imgur.com/EfFIhKq.png)
 
 ## Sources
 
