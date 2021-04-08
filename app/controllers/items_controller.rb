@@ -7,7 +7,7 @@ class ItemsController < ApplicationController
   end
 
   def index
-    @items = Item.find_each(start: params[:start], finish: params[:finish])
+    @items = Item.find_each(start: params[:start].to_i, finish: params[:finish].to_i)
     render json: @items
   end
 
