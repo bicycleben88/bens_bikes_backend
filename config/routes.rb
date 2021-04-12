@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   resources :orders
   resources :items
   resource :users, only: [:show, :create]
+  resources :account_activations, only: [:edit]
   post "/login", to: "users#login"
   get "/auto_login", to: "users#auto_login"
   get "/items_count", to: "items#count"
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_12_154700) do
+ActiveRecord::Schema.define(version: 2021_04_12_182338) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -67,6 +67,7 @@ ActiveRecord::Schema.define(version: 2021_04_12_154700) do
     t.bigint "cartitems_id"
     t.boolean "activated", default: false
     t.string "email"
+    t.string "activation_digest"
     t.index ["cartitems_id"], name: "index_users_on_cartitems_id"
   end
 
