@@ -1,0 +1,7 @@
+<h1>Welcome to Ben's Bikes</h1>
+
+<p>Hey <%= @user.username %> </p>
+
+<p>Click the link to activate your account!</p>
+
+<%= link_to "Activate", edit_account_activation_url(@user.activation_token, email: @user.email) %>
