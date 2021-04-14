@@ -16,7 +16,7 @@ class UsersController < ApplicationController
       #   render json: {error: "Invalid username or password"}
       # end
     end
-  
+    
     def login
       @user = User.find_by(username: params[:username])
   
