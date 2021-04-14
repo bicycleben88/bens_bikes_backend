@@ -2,13 +2,19 @@ class UsersController < ApplicationController
   before_action :authorized, only: [:auto_login]
 
     def create
-      @user = User.create(user_params)
-      if @user.valid?
+      @user = User.new(user_params)
+      if @user.save
         token = encode_token({user_id: @user.id})
+        UserMailer.account_activation(@user).deliver_now
         render json: {user: @user, token: token}
       else
-        render json: {error: "Invalid username or password"}
+        render 'new'
       end
+      # @user = User.create(user_params)
+      # if @user.valid?
+      # else
+      #   render json: {error: "Invalid username or password"}
+      # end
     end
   
     def login
@@ -31,7 +37,7 @@ class UsersController < ApplicationController
     private
   
     def user_params
-      params.permit(:username, :password, :age)
+      params.permit(:username, :password, :email, :activation, :user)
     end
 
 end

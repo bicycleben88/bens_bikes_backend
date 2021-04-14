@@ -14,6 +14,9 @@ class User < ApplicationRecord
         
         def create_activation_digest
             self.activation_token = User.new_token
-            self.activation_digest = User.digest(activation_token)
+        end
+
+        def User.new_token
+            SecureRandom.urlsafe_base64
         end
 end
