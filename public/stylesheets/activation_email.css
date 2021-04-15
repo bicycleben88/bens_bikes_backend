@@ -1,0 +1,22 @@
+header {
+  text-align: center;
+}
+h1 {
+  color: rgb(77, 32, 240);
+}
+.username {
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+body p {
+  text-indent: 20px;
+}
+footer {
+  border-top: 1px solid darkorange;
+  text-align: center;
+}
+footer a {
+  padding: 0 2px;
+  text-decoration: none;
+  color: rgb(77, 32, 240);
+}

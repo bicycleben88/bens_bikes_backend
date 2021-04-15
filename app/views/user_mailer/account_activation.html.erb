@@ -1,7 +1,21 @@
-<h1>Welcome to Ben's Bikes</h1>
+<%= stylesheet_link_tag "activation_email" %>
 
-<p>Hey <%= @user.username %> </p>
+<header>
+    <h1>Welcome to Ben's Bikes</h1>
+</header>
+<body>
+    <h4>Hey <strong class="username"><%= @user.username %></strong>, </h4>
+    <p>
+        Click 
+        <%= link_to "Here", edit_account_activation_url(@user.activation_token, email: @user.email) %>
+        to activate your account!
+    </p>
+    <p> Time to start shopping for some seriously shred-worthy bikes and bike gear! </p>
+</body>
+<footer>
+    <h4> Contact Links </h4>
+    <a href="https://higginbotham.fun">Portfolio</a>
+    <a href="https://www.linkedin.com/in/benjamin-alt-higginbotham/">LinkedIn</a>
+    <a href="https://github.com/bicycleben88">Git Hub</a> 
+</footer>
 
-<p>Click the link to activate your account!</p>
-
-<%= link_to "Activate", edit_account_activation_url(@user.activation_token, email: @user.email) %>
