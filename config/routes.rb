@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => 'items#index'
   resources :order_items
   resources :cartitems
   resources :fix_price_columns

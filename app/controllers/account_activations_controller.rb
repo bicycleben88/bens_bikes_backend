@@ -4,7 +4,7 @@ class AccountActivationsController < ApplicationController
         @user = User.find_by(email: params[:email])
         if @user && !@user.activated?
             @user.update_attribute(:activated, true)
-            render json: {user: @user}
+            redirect_to root_path
         else
             render json: {error: "Cannot activate user"}
         end
