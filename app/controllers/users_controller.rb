@@ -8,23 +8,21 @@ class UsersController < ApplicationController
         UserMailer.account_activation(@user).deliver_now
         render json: {user: @user, token: token}
       else
-        render 'new'
+        render json: {error: "Invalid username or password"}
       end
-      # @user = User.create(user_params)
-      # if @user.valid?
-      # else
-      #   render json: {error: "Invalid username or password"}
-      # end
     end
     
     def login
       @user = User.find_by(username: params[:username])
-  
       if @user && @user.authenticate(params[:password])
-        token = encode_token({user_id: @user.id})
-        render json: {user: @user, token: token}
+        if @user.activated
+          token = encode_token({user_id: @user.id})
+          render json: {user: @user, token: token}
+        else
+          render json: {error: "Account must be activated to log in"} 
+        end
       else
-        render json: {error: "Invalid username or password"}
+        render json: {error: "Invalid username or password, "}
       end
     end
   
