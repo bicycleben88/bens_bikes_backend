@@ -1,0 +1,41 @@
+main {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+}
+.email-body {
+  flex: 1;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url("https://i.imgur.com/EHzvNok.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+}
+h1 {
+  color: whitesmoke;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 95%;
+}
+.username {
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+body p {
+  text-indent: 20px;
+}
+footer {
+  border-top: 1px solid darkorange;
+  text-align: center;
+}
+footer a {
+  padding: 0 2px;
+  text-decoration: none;
+  color: rgb(77, 32, 240);
+}

@@ -4,7 +4,7 @@ class AccountActivationsController < ApplicationController
         @user = User.find_by(email: params[:email])
         if @user && !@user.activated?
             @user.update_attribute(:activated, true)
-            redirect_to root_path
+            redirect_to "https://bens-bikes-frontend.vercel.app/login"
         else
             render json: {error: "Cannot activate user"}
         end
