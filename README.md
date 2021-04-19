@@ -152,6 +152,21 @@ This is a front end e-commerce web application built with React. Users can creat
 > - In production.rb add the following configuration
 >
 > ![send grid configurations](https://i.imgur.com/pYhZ7UV.png)
+>
+> - In users_controller.rb invoke account_activation() function & .deliver_now method
+>
+> ![deliver now](https://i.imgur.com/zERje2n.png)
+>
+> Write Edit action in account_activation_controller.rb
+>
+> - Find user
+> - If there's a user, & it's not already activated, & the activation tokens match (see below), then update user.activated to true
+>
+> ![edit action](https://i.imgur.com/CpK3WOD.png)
+>
+> - Match activation tokens, in models/users.rb:
+>
+> ![decode token](https://i.imgur.com/xawOD4B.png)
 
 ## Sources
 
