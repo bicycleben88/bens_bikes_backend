@@ -103,11 +103,63 @@ This is a front end e-commerce web application built with React. Users can creat
 > - in items_controller.rb index route use .paginate method, passing it as arguments the page number and the number of items per page to display
 >   ![paginate index route](https://i.imgur.com/EfFIhKq.png)
 
+> ## Activate User's Account w/ email
+>
+> Add email (string) & activated (boolean) to user's model w/ migrations
+>
+> ![email migration](https://i.imgur.com/Wpr2tPq.png)
+>
+> Create AccountActivations controller
+>
+> ![account activations controller](https://i.imgur.com/kNMtFGD.png)
+>
+> In routes.rb create named route for edit action
+>
+> ![account activation edit route](https://i.imgur.com/7Nn0sC2.png)
+>
+> Create & Hash a unique activation token when creating a new user
+>
+> - Add activation_digest (string) to user's model w/ migrations
+>
+> ![activation digest migration](https://i.imgur.com/RwvlHOL.png)
+>
+> - in models/user.rb convert a user's email to lowercase & make a new activation token _before_ creating a new user
+>
+> ![before actions](https://i.imgur.com/rfQ6m4d.png)
+>
+> - in same file, under _private_ create the above functions
+>
+> ![user email and activation token functions](https://i.imgur.com/CpmOGU4.png)
+>
+> Generate mailer for account_activation & password_reset
+>
+> ![generate mailer](https://i.imgur.com/IwUGXIV.png)
+>
+> In application_mailer.rb change default email
+>
+> In user_mailer.rb lookup user & send to its email address
+>
+> ![user mailer](https://i.imgur.com/i0C9Elu.png)
+>
+> In account_activation.html.erb pass as arguments the user's activation token & email to edit_account_activation_url()
+>
+> ![email template](https://i.imgur.com/rnHuN4J.png)
+>
+> Send the email w/ link to activate account using SendGrid
+>
+> - Sign up for account on SendGrid
+>
+> - In production.rb add the following configuration
+>
+> ![send grid configurations](https://i.imgur.com/pYhZ7UV.png)
+
 ## Sources
 
 > [Stripe](https://stripe.com/)
 >
 > [Setting up Stripe on Rails](https://stripe.com/docs/legacy-checkout/rails)
+>
+> [Adding Email Verification with Rails](https://3rd-edition.railstutorial.org/book/account_activation_password_reset)
 
 ## Contact
 
