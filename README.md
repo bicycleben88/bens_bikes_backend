@@ -101,6 +101,7 @@ This is a front end e-commerce web application built with React. Users can creat
 > Use 'will_paginate' in items index route to render a specific number of items per page
 >
 > - in items_controller.rb index route use .paginate method, passing it as arguments the page number and the number of items per page to display
+> 
 >   ![paginate index route](https://i.imgur.com/EfFIhKq.png)
 
 > ## Activate User's Account w/ email
