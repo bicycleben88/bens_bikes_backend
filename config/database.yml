@@ -19,7 +19,7 @@ default: &default
   encoding: unicode
   port: 5432
   host: localhost
-  username: bens_bikes_backend
+  username: benridesbikes
   password: <%= ENV['BENS_BIKES_BACKEND_DATABASE_PASSWORD'] %>
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
@@ -86,4 +86,3 @@ production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
   database: bens_bikes_backend_production
-
