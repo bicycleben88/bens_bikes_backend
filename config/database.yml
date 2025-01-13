@@ -87,4 +87,5 @@ production:
   url: <%= ENV['DATABASE_URL'] %>
   username: <%= ENV['BENS_BIKES_BACKEND_USERNAME'] %>
   password: <%= ENV['BENS_BIKES_BACKEND_DATABASE_PASSWORD'] %>
+  host: <%= ENV['BENS_BIKES_BACKEND_HOST'] %>
   database: bens_bikes_backend_production
