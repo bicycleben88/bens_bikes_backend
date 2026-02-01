@@ -1,132 +1,166 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 
 Item.create([
-#     {
-#         name: "Revelate Saddle Bag",
-#         image: "https://i.imgur.com/JYIj6e5.jpg",
-#         largeimage: "https://i.imgur.com/ijcpRqa.jpg",
-#         description: "With an innovative stability system that eliminates side-to-side sway, the Revelate Designs Spinelock 16L seat bag has a low-profile mount with 2 positions for seatpost setback and saddle adjustments",
-#         price: 164.99,
-#         qty: 50
-#     },
-#     {
-#         name: "Moots Baxter",
-#         image: "https://i.imgur.com/6A0kRqM.jpg",
-#         largeimage: "https://i.imgur.com/eF4evMD.jpg",
-#         description: "ADVENTURE READY—bike packing, touring, single-track, double-track exploring to Tour Divide. The Baxter covers multiple riding situations as a super versatile machine. Think mountain bike capabilities in a monster cross build",
-#         price: 3899.99,
-#         qty: 50
-#     },
-#     {
-#         name: "Ortlieb Fork Pack",
-#         image: "https://i.imgur.com/FvP6glf.jpg",
-#         largeimage: "https://i.imgur.com/KoMOoe9.jpg",
-#         description: "It features a welded, waterproof, roll-top design, has over four liters of storage, and can be released and attached quickly from it’s own proprietary mounting clip/plate",
-#         price: 124.99,
-#         qty: 50
-#     },
-#     {
-#         name: "Rene Herse Fleecer Ridge",
-#         image: "https://i.imgur.com/1RIL9qa.jpg",
-#         largeimage: "https://i.imgur.com/CBrlzJz.jpg",
-#         description: "Rene Herse worked directly with ultra-endurance cyclist Lael Wilcox to create a tire made “to conquer the Tour Divide, Silk Road Mountain Race, and tours into the unknown.” Named after Lael’s favorite climb on the Divide, the Fleecer Ridge comes in one size, 29″ x 2.2″ (or 700C x 55 mm)",
-#         price: 89.99,
-#         qty: 50
-#     },
-#     {
-#         name: "Big Agnes Tiger Wall 3 Carbon",
-#         image: "https://i.imgur.com/ZucjNra.jpg",
-#         largeimage: "https://i.imgur.com/3YiHEqi.jpg",
-#         description: "Paying $1,000+ for a tent won’t be for everyone. But if you’re trying to conserve weight and packing space and still want a roomy mobile domicile fit for a couple on a long trip, it might be worthwhile for a 3-person tent that’s just a hair over two pounds",
-#         price: 1189.99,
-#         qty: 50
-#     }
-    {
-        name: "DECATHLON RIVERSIDE TOURING 920",
-        image: "https://i.imgur.com/Xl85J6K.jpg",
-        largeimage: "https://i.imgur.com/8BvKcLL.jpg",
-        description: "The Touring 920 caught our attention with its huge selection of mounting points (33 in total), including seat stay cargo mounts, top tube mounts, fork leg mounts, and more",
-        price: 1764.98,
+{
+        name: "APEX ZENITH TRAIL-FINDER",
+        image: "https://i.imgur.com/zYHDMaF.jpg",
+        largeimage: "https://i.imgur.com/zOgnq8T.jpg",
+        description: "The Zenith Trail-Finder (disguised here as a Peugeot single speed) is forged from a secret alloy, offering the rigidity of carbon with the soul of steel. Designed for those who think a 'path' is just a suggestion.",
+        price: 2499.00,
         qty: 50
     },
     {
-        name: "CRANKBROTHERS M19",
-        image: "https://i.imgur.com/BYdKHB5.jpg",
-        largeimage: "https://i.imgur.com/GlouT95.jpg",
-        description: "It has a great selection of standard tools, including 2, 2.5, 3, 4, 5, 6, and 8mm hex keys, 8 and 10mm wrenches, a #1 and #2 Phillips driver, #2 flat head, three different spoke wrenches, and T10 and T25 Torx",
-        price: 19.99,
+        name: "VELOCITY CARBONITE S-7",
+        image: "https://i.imgur.com/Tn1yELn.jpg",
+        largeimage: "https://i.imgur.com/396GcGk.jpg",
+        description: "Aerodynamics meets aggression. The S-7 features an integrated cockpit and 'Whisper-Drive' technology, making it the quietest—and fastest—bike on the pavement. Scissor tattoo not include",
+        price: 4200.50,
         qty: 50
     },
     {
-        name: "SPECIALIZED RIME FLAT SHOES",
-        image: "https://i.imgur.com/G5u03fc.jpg",
-        largeimage: "https://i.imgur.com/jn6W37Q.jpg",
-        description: "In 2019, Specialized announced a major update to the Rime lineup, featuring aggressive Vibram soles, lots of ventilation, and an overall rugged look—all the ingredients for a good bikepacking shoe",
-        price: 130.00,
+        name: "NEOQUEST EXPLORER SADDLE-PACK",
+        image: "https://i.imgur.com/eVBVErm.jpg",
+        largeimage: "https://i.imgur.com/7jbvwrf.jpg",
+        description: "Built with 'Void-Stitch' waterproofing, the Explorer Saddle-Pack expands from 5L to 15L in seconds, perfect for afternoon sprints or week-long expeditions.",
+        price: 145.00,
         qty: 50
     },
     {
-        name: "BOMBTRACK HOOK EXT TITANIUM",
-        image: "https://i.imgur.com/DwXHbaO.jpg",
-        largeimage: "https://i.imgur.com/bxdkg6B.jpg",
-        description: "One of the more surprising additions to the expansive 2021 Bombtrack lineup is a titanium version of their celebrated Hook EXT all-road/gravel rig, which until now was only offered in steel or carbon",
-        price: 2729.99,
+        name: "AEROGLIDE PHANTOM HUBSET",
+        image: "https://i.imgur.com/6rhFDEu.jpeg",
+        largeimage: "https://i.imgur.com/6rhFDEu.jpeg",
+        description: "Zero friction, maximum style. The Phantom Hubset uses magnetic levitation bearings to provide a rolling resistance that feels like gliding on air.",
+        price: 899.99,
         qty: 50
     },
     {
-        name: "OUTER SHELL HIP SLINGER",
-        image: "https://i.imgur.com/cg9MKuR.jpg",
-        largeimage: "https://i.imgur.com/lJZVYz2.jpg",
-        description: "It features a roll-top style closure, except that it uses side clips and cords to adjust and hold it in place, which is both strangely satisfying to use and once practised, speedy to access, too",
-        price: 90.00,
+        name: "TITAN FORGE GRAVEL-GRINDER 3000",
+        image: "https://i.imgur.com/6rhFDEu.jpeg", 
+        largeimage: "https://i.imgur.com/6rhFDEu.jpeg",
+        description: "Whether it’s loose shale or deep mud, the Titan Forge handles it all. Featuring 'Tread-Morph' tires that adapt to your terrain, this is the ultimate do-it-all machine.",
+        price: 3150.00,
         qty: 50
     },
     {
-        name: "Garmin Edge 830",
-        image: "https://i.imgur.com/ioHhB1h.jpg",
-        largeimage: "https://i.imgur.com/gUKZMbL.jpg",
-        description: "It’s powered by AA batteries, the device itself is durable, weatherproof, and reliable, and it’s fairly simple to use",
-        price: 399.99,
-        qty: 50
+        name: "OBSIDIAN FLOW ENDURO",
+        image: "https://i.imgur.com/6rhFDEu.jpeg",
+        largeimage: "https://i.imgur.com/6rhFDEu.jpeg",
+        description: "Carved from a single block of pressurized basalt (not really, it's carbon), the Obsidian Flow is for riders who find gravity to be more of a 'suggestion' than a law. Features 180mm of travel and a paint job that absorbs 99% of visible light.",
+        price: 5499.00,
+        qty: 12
     },
     {
-        name: "PRIMUS FIRESTICK STOVE",
-        image: "https://i.imgur.com/8xOXhYp.jpg",
-        largeimage: "https://i.imgur.com/aA3jhR1.jpg",
-        description: "Although it’s heavier and larger than many of its competitors, its sturdiness provides a little reassurance when jostling around in my frame bag all day",
-        price: 65.95,
-        qty: 50
+        name: "QUANTUM-SHIFT WIRELESS DERAILLEUR",
+        image: "https://i.imgur.com/6rhFDEu.jpeg",
+        largeimage: "https://i.imgur.com/6rhFDEu.jpeg",
+        description: "Using proprietary sub-atomic signaling, the Quantum-Shift moves your chain before you even think about clicking the trigger. Requires a firmware update every Tuesday and a degree in particle physics to index.",
+        price: 799.95,
+        qty: 25
     },
     {
-        name: "MARIN PINE MOUNTAIN 2",
-        image: "https://i.imgur.com/9KaimyD.jpg",
-        largeimage: "https://i.imgur.com/BayanHq.jpg",
-        description: "When the first photos of the 2020 Marin Pine Mountain 2 surfaced, they screamed “adventure,” or at least what some people think adventure looks like",
-        price: 2369.00,
-        qty: 50
+        name: "CLOUDBURST 'INVISI-SHIELD' JACKET",
+        image: "https://i.imgur.com/6rhFDEu.jpeg",
+        largeimage: "https://i.imgur.com/6rhFDEu.jpeg",
+        description: "A rain jacket so breathable it actually lowers your heart rate. It’s made from a fabric so thin that it’s technically a liquid, yet it’s guaranteed to keep you dry in a hurricane or a localized monsoon.",
+        price: 320.00,
+        qty: 40
     },
     {
-        name: "TAILFIN CARGO CAGE",
-        image: "https://i.imgur.com/NpF8Vuy.jpg?2",
-        largeimage: "https://i.imgur.com/mwiTSyI.jpg",
-        description: "Tailfin Cargo Cage, available in two sizes, both of which are intended to be used in conjunction with Voile straps, the bikepacker’s perennial favourite for lashing all and sundry onto their bikes",
-        price: 55.00,
-        qty: 50
+        name: "GRAVITY-DEFIER MANGANESE PEDALS",
+        image: "https://i.imgur.com/6rhFDEu.jpeg",
+        largeimage: "https://i.imgur.com/6rhFDEu.jpeg",
+        description: "Featuring 42 razor-sharp pins per side, these pedals offer so much grip they’ve been known to bond permanently with your shoes at a molecular level. Includes a free box of bandages for your shins.",
+        price: 185.00,
+        qty: 60
     },
     {
-        name: "DYED IN THE WOOL XL BAR BAG",
-        image: "https://i.imgur.com/YYvhqUk.jpg",
-        largeimage: "https://i.imgur.com/xjzMDFr.jpg",
-        description: "Whether going out for a day ride, a multi-day trip, or just pedaling down to the shop, the XL Bar Bag’s adaptable 8-24L size has lent itself well to all of the packing scenarios I’ve thrown at it to date.",
-        price: 216.99,
-        qty: 50
+        name: "THE 'EVERYTHING' CARGO CANISTER",
+        image: "https://i.imgur.com/6rhFDEu.jpeg",
+        largeimage: "https://i.imgur.com/6rhFDEu.jpeg",
+        description: "Is it a water bottle? A tool roll? A miniature charcoal grill? Yes. The Everything Canister fits in a standard bottle cage and contains enough storage to sustain a small village for a weekend.",
+        price: 45.99,
+        qty: 100
     },
+    {
+        name: "SOLAR-FLARE LITHIUM HEADLIGHT",
+        image: "https://i.imgur.com/6rhFDEu.jpeg",
+        largeimage: "https://i.imgur.com/6rhFDEu.jpeg",
+        description: "Boasting 15,000 lumens, this light doesn't just illuminate the trail; it actually speeds up the growth of the forest around you. Warning: Do not point at low-flying aircraft.",
+        price: 210.00,
+        qty: 15
+    },
+    {
+        name: "NEO-VINTAGE 'IRON-LUNG' URBAN BIKE",
+        image: "https://i.imgur.com/6rhFDEu.jpeg",
+        largeimage: "https://i.imgur.com/6rhFDEu.jpeg",
+        description: "For the rider who wants the aesthetic of a 1920s Belgian coal miner but the performance of a modern commuter. It’s heavy, it’s loud, and it only comes in 'Soaked Asphalt' Grey.",
+        price: 850.00,
+        qty: 8
+    },
+    {
+        name: "ZENITH COMFORT-CRUISER SADDLE",
+        image: "https://i.imgur.com/6rhFDEu.jpeg",
+        largeimage: "https://i.imgur.com/6rhFDEu.jpeg",
+        description: "Stuffed with recycled marshmallows and aerospace-grade memory foam. Sitting on this saddle is less like riding a bike and more like being hugged by a very supportive cloud.",
+        price: 89.00,
+        qty: 45
+    },
+    {
+        name: "TITAN-GRIP CERAMIC CHAIN LUBE",
+        image: "https://i.imgur.com/6rhFDEu.jpeg",
+        largeimage: "https://i.imgur.com/6rhFDEu.jpeg",
+        description: "One application of Titan-Grip lasts for 10,000 miles, or until the heat death of the universe—whichever comes first. Repels dirt, water, and unwanted conversations about drivetrain maintenance.",
+        price: 24.50,
+        qty: 200
+    },
+    {
+        name: "NOMADIC SPIRIT BAR-BAG (XL)",
+        image: "https://i.imgur.com/6rhFDEu.jpeg",
+        largeimage: "https://i.imgur.com/6rhFDEu.jpeg",
+        description: "A bag designed for those who leave on a Friday and return... eventually. Features an integrated coffee grinder and enough space for a down quilt and your existential dread.",
+        price: 155.00,
+        qty: 30
+    },{
+        name: "TRAIL-NIRVANA HELIUM TENT",
+        image: "https://i.imgur.com/6rhFDEu.jpeg",
+        largeimage: "https://i.imgur.com/6rhFDEu.jpeg",
+        description: "A tent so light it actually has a negative weight. If you don't stake this down with titanium anchors immediately, it will float away into the stratosphere. Sleeps one human and one very small, non-claustrophobic dog.",
+        price: 899.00,
+        qty: 10
+    },
+    {
+        name: "SUB-ZERO 'YETI-HUG' SLEEPING SYSTEM",
+        image: "https://i.imgur.com/6rhFDEu.jpeg",
+        largeimage: "https://i.imgur.com/6rhFDEu.jpeg",
+        description: "Rated for -150°F. Developed for Martian expeditions but repurposed for those breezy nights in the High Sierras. It features 'Empathy-Fluff' insulation that mimics the warmth of a mother’s love.",
+        price: 450.00,
+        qty: 15
+    },
+    {
+        name: "TRANSCENDENTAL TITANIUM SPORK",
+        image: "https://i.imgur.com/6rhFDEu.jpeg",
+        largeimage: "https://i.imgur.com/6rhFDEu.jpeg",
+        description: "Is it a spoon? A fork? A defensive weapon? A bottle opener? Yes. Forged in the fires of a dying star (or a factory in Ohio), this 0.4oz tool is the only thing you'll need to eat your dehydrated kale.",
+        price: 35.00,
+        qty: 150
+    },
+    {
+        name: "THE 'WAYFINDER' UN-GPS",
+        image: "https://i.imgur.com/6rhFDEu.jpeg",
+        largeimage: "https://i.imgur.com/6rhFDEu.jpeg",
+        description: "A digital compass that only points to 'Adventure.' It doesn't give coordinates or turn-by-turn directions. It just hums reassuringly when you are heading further away from civilization.",
+        price: 120.00,
+        qty: 20
+    },
+    {
+        name: "BINARY-STAR PORTABLE FIREPIT",
+        image: "https://i.imgur.com/6rhFDEu.jpeg",
+        largeimage: "https://i.imgur.com/6rhFDEu.jpeg",
+        description: "Collapses to the thickness of a credit card but burns with the intensity of a small sun. Uses 'Plasma-Draft' technology to ensure your marshmallows are toasted at a molecular level in 0.4 seconds.",
+        price: 75.50,
+        qty: 40
+    }
 ])
 
 
