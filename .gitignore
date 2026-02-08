@@ -27,4 +27,4 @@ local_env.yml
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-/db/migrate/*
+/db/migrate/
