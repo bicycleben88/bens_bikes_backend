@@ -28,17 +28,17 @@ Item.create([
     },
     {
         name: "AEROGLIDE PHANTOM HUBSET",
-        image: "https://i.imgur.com/6rhFDEu.jpeg",
-        largeimage: "https://i.imgur.com/6rhFDEu.jpeg",
-        description: "Zero friction, maximum style. The Phantom Hubset uses magnetic levitation bearings to provide a rolling resistance that feels like gliding on air.",
+        image: "/images/items/AEROGLIDE_PHANTOM_HUBSET_icon.jpg",
+        largeimage: "/images/items/AEROGLIDE_PHANTOM_HUBSET_hero.jpg",
+        description: "Zero friction, maximum style. The Phantom Hubset uses magnetic levitation bearings (first used in pianos) to provide a rolling resistance that feels like gliding on air.",
         price: 899.99,
         qty: 50
     },
     {
         name: "TITAN FORGE GRAVEL-GRINDER 3000",
-        image: "https://i.imgur.com/6rhFDEu.jpeg", 
-        largeimage: "https://i.imgur.com/6rhFDEu.jpeg",
-        description: "Whether it’s loose shale or deep mud, the Titan Forge handles it all. Featuring 'Tread-Morph' tires that adapt to your terrain, this is the ultimate do-it-all machine.",
+        image: "/images/items/TITAN_FORGE_GRAVEL-GRINDER_3000_icon.jpg", 
+        largeimage: "/images/items/TITAN_FORGE_GRAVEL-GRINDER_3000_hero.jpg",
+        description: "Whether it’s loose shale or deep mud, the Titan Forge handles it all. Forged by the actual Titan above, and featuring 'Tread-Morph' tires that adapt to your terrain, this is the ultimate do-it-all machine.",
         price: 3150.00,
         qty: 50
     },
